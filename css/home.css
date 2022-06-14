@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .2em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.current-page {
+    font-weight: bold;
+    color: gold;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-image: url(../assets/bg-black.jpg);
+}
+
+#logo {
+    pointer-events: none;
+    cursor: default;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: gold;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+nav {
+    margin: .5em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.85em;
+}
+
+footer{
+    padding: 5vh 10vw;
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-title {
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+#footer-desc {
+    color: grey;
+}
+
+/* content css */
+#overview{
+    background: linear-gradient(rgba(20, 20, 20, 0.75),rgba(20, 20, 20, 0.75)),url('../assets/overview_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    color: white;
+}
+
+#overview-text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 1px 1px 1px black, 
+    1px 1px 1px black,
+    1px 1px 1px black,
+    1px 1px 1px black;
+}
+
+#overview-text span{
+    margin: 0 0 20px 0;
+}
+
+#overview-text-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: gold;
+}
+
+#overview-text-desc {
+    font-size: 1em;
+    font-weight: normal;
+    width: 90%;
+}
+
+#trailer-vid-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-trailer {
+    width: 80%;
+    height: 80%;
+}
+
+#trailer-text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#synopsis-img-container {
+    margin-left: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/synopsis_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+#synopsis-text-container {
+    background-image: url(../assets/bg-marble.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 50% 0, 70% 100%, 0% 100%);
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    z-index: 1;
+}
+
+#synopsis-text {
+    width: 50%;
+    height: 100%;
+    margin-left: 3em;
+}
+
+#cast-btn {
+    margin-left: 13.25vw;
+}
+
+#trailer-text .animate-text h1, #trailer-text .animate-text p,
+#synopsis-text-container .animate-text h1, #synopsis-text-container .animate-text p{
+    text-align: center;
+}
+
+#trailer-text .animate-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    color: white;
+}
+
+.animate-text img, .animate-text h5, .animate-text h1, .animate-text p{
+    margin: 1vw 0;
+}
+
+.animate-text p{
+    text-align: start;
+}
+
+.animate-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.2s ease;
+}
+
+.animate-text.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.module-text{
+    font-size: 1.1em;
+    letter-spacing: 0.04em;
+}
+
+.module-btn{
+    width: 16rem;
+    position: relative;
+    background: none;
+    color: crimson;
+    padding: 15px 30px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: none;
+    transition: .5s linear;
+    transition-delay: 0s;
+}
+.module-btn:hover{
+    background: crimson;
+    color: white;
+    transition: .5s linear;
+    transition-delay: 1s;
+}
+.module-btn span{
+    display: block;
+    position: absolute;
+}
+.module-btn span:nth-child(1){
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, crimson);
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.module-btn:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.module-btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, crimson);
+    transition: 0.5s;
+    transition-delay: 0.75s;
+}
+.module-btn:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.module-btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, crimson);
+    transition: 0.7s;
+    transition-delay: 0.25s;
+}
+.module-btn:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.module-btn span:nth-child(4){
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(360deg, transparent, crimson);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.module-btn:hover span:nth-child(4){
+    top: -100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+@media (max-width: 768px){
+    nav, nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #cast-btn {
+        margin-left: 0;
+    }
+}
